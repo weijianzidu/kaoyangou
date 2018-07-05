@@ -1,0 +1,98 @@
+<!-- MAIN CONTENT -->
+            <div class="main-content">
+                <div class="container-fluid">
+                    <h3 class="page-title">院校管理</h3>
+                    <div class="panel panel-headline">
+                        <div class="panel-body">
+                                <button type="button" tooltip="添加栏目" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '{:url('/admin/typography/add/')}'"> <i class="fa fa-plus"></i> 添加院校
+                                </button>
+                        
+                            <hr>
+                            <p>“e+研学”可以更好的帮助考研学子更加准确的定位学校以及各个专业，帮助学子更好的做出决定。</p>
+                            <hr>
+                            
+                            <div class="tabbable" id="tabs-618973">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="#panel-660410" data-toggle="tab">院校管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="#panel-90546" data-toggle="tab">文件管理</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="panel-660410">
+                                                <table class="table table-bordered table-hover">
+                                                        <thead class="">
+                                                            <tr>
+                                                                <th class="text-center" width='10%'>ID</th>
+                                                                <th class="text-center" width="15%">学校名称</th>
+                                                                 <th class="text-center" width='10%' >学校简介</th>
+                                                                 <th class="text-center"  width='5%'>学校排名</th>
+                                                                <th class="text-center"  width='20%'>操作</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          {volist name='list' id='lists'}
+                                                           <tr>
+                                                                <td align="center" class="text-muted">{$lists.id}</td>
+                                                                <td align="center" class="text-info">{$lists.name}</td>
+                                                                <td align="center" class="text-success">{$lists.summary}</td>
+                                                                <td align="center" class="text-muted">{$lists.rank}</td>
+                                                                <td>
+                                                                <a href="{:url('typography/edit',array('id'=>$lists.id))}" class="btn btn-primary btn-sm shiny">
+                                                                <i class="fa fa-edit"></i> 编辑
+                                                                </a>
+                                                                <a href="{:url('typography/del',array('id'=>$lists.id))}" class="btn btn-danger btn-sm shiny">
+                                                                <i class="fa fa-trash-o"></i> 删除
+                                                                </a>
+                                                                </td>
+                                                          </tr>     
+                                                           {/volist}            
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="pagination pagination-centered">
+                                                            {$list->render()}
+                                                        </div>
+                                        </div>
+                                        <div class="tab-pane" id="panel-90546">
+                                                <table class="table table-bordered table-hover">
+                                                        <thead class="">
+                                                            <tr>
+                                                                <th class="text-center" width='10%'>ID</th>
+                                                                <th class="text-center" width="15%">文件名称</th>
+                                                                 <th class="text-center" width='10%' >是否推荐</th>
+                                                                <th class="text-center"  width='20%'>操作</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          {volist name='flist' id='flists'}
+                                                           <tr>
+                                                                <td align="center" class="text-muted">{$flists.id}</td>
+                                                                <td align="center" class="text-info">{$flists.files}</td>
+                                                                <td align="center">{if condition="$flists['push'] eq 1"}是{else/}否{/if}</td>
+                                                                <td align="center">
+                                                                
+                                                                <a href="{:url('typography/del',array('id'=>$flists.id))}" class="btn btn-danger btn-sm shiny">
+                                                                <i class="fa fa-trash-o"></i> 删除
+                                                                </a>
+                                                                </td>
+                                                          </tr>     
+                                                           {/volist}            
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="pagination pagination-centered">
+                                                            {$list->render()}
+                                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                           
+                            <hr>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>

@@ -1,0 +1,244 @@
+<!Doctype html>
+<html lang="cn">
+
+<head>
+    <title>考研狗之家后台管理系统</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/vendor/linearicons/style.css">
+    <link rel="stylesheet" href="/assets/vendor/chartist/css/chartist-custom.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/demo.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon.png">
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="brand">
+                <a href="index.html"><img src="/assets/img/logo-dark.png" class="img-responsive logo"></a>
+            </div>
+            <div class="container-fluid">
+                <div class="navbar-btn">
+                    <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+                </div>
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                        <input type="text" value="" class="form-control" placeholder="请输入...">
+                        <span class="input-group-btn"><button type="button" class="btn btn-primary">搜索</button></span>
+                    </div>
+                </form>
+                <div class="navbar-btn navbar-btn-right">
+                    <a class="btn btn-success update-pro" href="/admin"><i class="fa fa-rocket"></i> <span>返回主页面</span></a>
+                </div>
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="lnr lnr-alarm"></i>
+                                <span class="badge bg-danger">2</span>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>用户反馈</a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-danger"></span>数据信息</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i> <span>帮助</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://www.thinkphp.cn/topic/42090.html">开发手册</a></li>
+                                <li><a href="http://baidu.com">搜索引擎</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>kaoyan</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><i class="lnr lnr-user"></i> <span>管理员信息</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="sidebar-nav" class="sidebar">
+            <div class="sidebar-scroll">
+                <nav>
+                    <ul class="nav">
+                        <li><a href="/admin" class=""><i class="lnr lnr-home"></i> <span>数据统计</span></a></li>
+
+                        //
+                        <div class="accordion" id="accordion-728733">
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-728733" href="#accordion-element-208450">选项卡 #1</a>
+                                    </div>
+                                    <div id="accordion-element-208450" class="accordion-body collapse in">
+                                        <div class="accordion-inner">
+                                            功能块...
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-728733" href="#accordion-element-577510">选项卡 #2</a>
+                                    </div>
+                                    <div id="accordion-element-577510" class="accordion-body collapse">
+                                        <div class="accordion-inner">
+                                            功能块...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                              //
+                        <li><a href="/admin/elements" class=""><i class="lnr lnr-arrow-right-circle"></i> <span>文章推送</span></a>
+                        </li>
+                        <li><a href="/admin/elements/list" ><i class="lnr lnr-code"></i> <span>文章管理</span></a></li> 
+                        <li><a href="/admin/elements/show" class=""><i class="lnr lnr-cog"></i> <span>图文显示</span></a></li>
+                        <li><a href="/admin/users" class=""><i class="lnr lnr-dice"></i> <span>用户信息</span></a></li>
+                        <li><a href="/admin/typography" class=""><i class="lnr lnr-bookmark"></i> <span>院校管理</span></a></li>
+                        <!-- <li><a href="/admin/typography"><i class="lnr lnr-bookmark"></i><span>增加院校</span></a></li> -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="main">
+            {__CONTENT__}
+        </div>
+        <div class="clearfix"></div>
+        <footer>
+            <div class="container-fluid">
+                <p class="copyright">&copy; 2018 <a href="#" target="_blank">php项目实训</a>. 2015级 <a href="#" target="_blank" title="PHP中文网">考研狗之家</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="/assets/vendor/chartist/js/chartist.min.js"></script>
+    <script src="/assets/scripts/klorofil-common.js"></script>
+    <script>
+    $(function() {
+        var data, options;
+
+       
+        data = {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            series: [
+                [23, 29, 24, 40, 25, 24, 35],
+                [14, 25, 18, 34, 29, 38, 44],
+            ]
+        };
+
+        options = {
+            height: 300,
+            showArea: true,
+            showLine: false,
+            showPoint: false,
+            fullWidth: true,
+            axisX: {
+                showGrid: false
+            },
+            lineSmooth: false,
+        };
+
+        new Chartist.Line('#headline-chart', data, options);
+
+
+        data = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            series: [{
+                name: 'series-real',
+                data: [200, 380, 350, 320, 410, 450, 570, 400, 555, 620, 750, 900],
+            }, {
+                name: 'series-projection',
+                data: [240, 350, 360, 380, 400, 450, 480, 523, 555, 600, 700, 800],
+            }]
+        };
+
+        options = {
+            fullWidth: true,
+            lineSmooth: false,
+            height: "270px",
+            low: 0,
+            high: 'auto',
+            series: {
+                'series-projection': {
+                    showArea: true,
+                    showPoint: false,
+                    showLine: false
+                },
+            },
+            axisX: {
+                showGrid: false,
+
+            },
+            axisY: {
+                showGrid: false,
+                onlyInteger: true,
+                offset: 0,
+            },
+            chartPadding: {
+                left: 20,
+                right: 20
+            }
+        };
+
+        new Chartist.Line('#visits-trends-chart', data, options);
+
+
+        data = {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            series: [
+                [6384, 6342, 5437, 2764, 3958, 5068, 7654]
+            ]
+        };
+
+        options = {
+            height: 300,
+            axisX: {
+                showGrid: false
+            },
+        };
+
+        new Chartist.Bar('#visits-chart', data, options);
+
+
+     
+        var sysLoad = $('#system-load').easyPieChart({
+            size: 130,
+            barColor: function(percent) {
+                return "rgb(" + Math.round(200 * percent / 100) + ", " + Math.round(200 * (1.1 - percent / 100)) + ", 0)";
+            },
+            trackColor: 'rgba(245, 245, 245, 0.8)',
+            scaleColor: false,
+            lineWidth: 5,
+            lineCap: "square",
+            animate: 800
+        });
+
+        var updateInterval = 3000; 
+
+        setInterval(function() {
+            var randomVal;
+            randomVal = getRandomInt(0, 100);
+
+            sysLoad.data('easyPieChart').update(randomVal);
+            sysLoad.find('.percent').text(randomVal);
+        }, updateInterval);
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+    });
+    </script>
+</body>
+
+</html>

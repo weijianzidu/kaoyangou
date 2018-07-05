@@ -1,0 +1,44 @@
+<!-- MAIN CONTENT -->
+            <div class="main-content">
+                <div class="container-fluid">
+                    <h3 class="page-title">用户信息</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">用户列表</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                
+                                                <th>用户ID</th>
+                                                <th>用户名称</th>
+                                                <th>手机号码</th>
+                                                <th>创建时间</th>
+                                                <th>更新时间</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                {volist name='user' id='users'}
+                                            <tr>
+                                                <td>{$users.Id}</td>
+                                                <td>{$users.username}</td>
+                                                <td>{$users.tellphone}</td>
+                                                <td>{$users.create_time}</td>
+                                                <td>{$users.update_time}</td>
+                                            </tr>
+                                                {/volist}
+                                        </tbody>
+                                
+                                    </table>
+                                    <div class="pagination pagination-centered">
+                                        {$user->render()}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                        
+                </div>
+            </div>

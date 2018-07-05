@@ -1,0 +1,21 @@
+<div class="container">
+</br>
+<hr>
+    
+    <div class="row-fluid">
+            {volist name='searchres' id='list'}
+        <div class="span12">
+                <input type="text" hidden <form class="form-horizontal" role="form" action="{:url('/front/search/index')}" method="post" enctype="multipart/form-data" hidden="hidden" name="name" value="{$list.name}">
+                    <!-- 隐藏域 -->
+                    <input type="text" hidden="hidden" name="name" value="{$list.name}">
+            <h3 class="text-center">
+                 <a href="{:url('infor/sinfo',array('id'=>$list.id))}">{$list.name}</a>
+            </h3>
+                <dl>
+               <dt>{$list.name}</dt>
+               {$list.sinfo} 
+            </dl>
+        </div>
+        {/volist}
+    </div>
+</div>

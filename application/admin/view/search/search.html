@@ -1,0 +1,22 @@
+<div class="search">
+    {volist name="searchres" id="vo"}
+    <h2><a target="_blank" href="{:url('typography/index',array('id'=>$vo['id']))}">{$vo.name}</a></h2>
+    <p class="dateview"><span>发布时间：{$vo['create_time']|date="Y-m-d",###}</span><span>作者:XXX</span></p>
+    <figure><div class="pic"><a target="_blank" href="{:url('typography/index',array('id'=>$vo['id']))}">
+    <img src="{if condition="$vo['pic'] neq ''"}/public{$vo.pic}{else /}/static/images/sarch.jpg{/if}" alt=""/> 
+    </a></div>
+    </figure>
+        <ul class="nlist">
+            <p>{$vo.summary}</p>
+            <div class="time">
+         <?php
+         $arr=explode(',',$vo['keywords']);
+         foreach($arr as $k=>$v){
+         echo "<a href='http://127.0.0.1:86/admin/public/index/search/index?keywords=$v'>$v</a>";
+         }
+         ?>
+            </div>
+            <a  title="/" href="/" target="_blank" class="readmore">详细信息>></a>
+        </ul>
+        {/volist}
+</div>

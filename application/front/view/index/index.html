@@ -1,0 +1,89 @@
+<div class="container-a">
+    <header>
+        <a href="index.html"><img src="/static/images/s-3.jpg"></a>
+    </header>
+    <section>
+        <div class="row">
+            <div class="col-md-8">
+                <article class="blog-post">
+                        {volist name='list' id='lists'}
+                        <div class="blog-post-body">
+                            <h2><a href="post.html">{$lists.title}</a></h2>
+                            <div class="post-meta"><span>by <a href="#">{$lists.author}</a></span>/<span><i class="fa fa-clock-o"></i>{$lists.create_time}</span>/<span><i class="fa fa-comment-o"></i> <a href="#">343</a></span></div>
+                            <p>{$lists.description}</p>
+                            <div class="read-more"><a href="{:url('article/show',array('id'=>$lists.id))}">Continue Reading</a></div>
+                        </div>
+                        <div class="blog-post-image">
+                                {if condition="$lists['pic'] neq ''"}
+                                <img src="/{$lists.pic}" height="35">
+                                {else/}
+                                暂无缩略图
+                                {/if}
+                        </div>
+                        
+                        {/volist}
+                    
+                </article>
+            </div>
+            <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >手机网站模板</a></div>
+            <div class="col-md-4 sidebar-gutter">
+                <aside>
+                    <!-- sidebar-widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="sidebar-title">考研报名</h3>
+                        <div class="widget-container widget-about">
+                            <a href="post.html"><img src="images/author.jpg" alt=""></a>
+                            <h4><a href="http://127.0.0.1:86/front/article/show/id/3">考研流程</a></h4>
+                            <h4><a href="http://yz.chsi.com.cn/">招考资讯</a></h4>
+                            <h4><a href="http://yz.chsi.com.cn/">招生信息</a></h4>
+                            <h4><a href= "http://yz.chsi.com.cn/">报考指南</a></h4>
+                            <!-- <div class="author-title">Designer</div> -->
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;温馨提示：考研需谨慎！！！</p>
+                        </div>
+                    </div>
+                    <!-- sidebar-widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="sidebar-title">考研调剂</h3>
+                        <div class="widget-container widget-about">
+                            <a href="post.html"><img src="images/author.jpg" alt=""></a>
+                            <h4><a href="http://yz.chsi.com.cn/yztj/">院校调剂</a></h4>
+                            <h4><a href="http://yz.chsi.com.cn/yztj/">考生调剂</a></h4>
+                            <h4><a href="http://yz.chsi.com.cn/yztj/">考研国家线</a></h4>
+                            <h4><a href="http://yz.chsi.com.cn/yztj/">各高校分数线</a></h4>
+                            <!-- <div class="author-title">Designer</div> -->
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;温馨提示：调剂需谨慎！！！</p>
+                        </div>
+                    </div>
+                    <!-- sidebar-widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="sidebar-title">考研真题</h3>
+                        <div class="widget-container">
+                            <ul>
+                                <li><a href="http://download.kaoyan.com/list-961">考研政治</a></li>
+                                <li><a href="http://download.kaoyan.com/list-963-t-1">考研数学</a></li>
+                                <li><a href="http://download.kaoyan.com/list-962/">考研英语</a></li>
+                                <li><a href="#">专业课</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- sidebar-widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="sidebar-title">Socials</h3>
+                        <div class="widget-container">
+                            <div class="widget-socials">
+                                <a href="http://www.lianpula.net/"><i class="fa fa-facebook"></i></a>
+                                <a href="http://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                                <a href="#"><i class="fa fa-reddit"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </aside>
+            </div>
+
+        </div>
+    </section>
+</div><!-- /.container -->
